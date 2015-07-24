@@ -1,12 +1,13 @@
 package stat
 
 import (
-	. "code.google.com/p/go-fn/fn"
 	"fmt"
 	"math"
 	"math/rand"
 	"testing"
 	"time"
+
+	. "code.google.com/p/go-fn/fn"
 )
 
 var Seed func(int64) = rand.Seed
@@ -84,7 +85,6 @@ func XTestGen(t *testing.T) {
 	fmt.Printf("NextBernoulli => %d\n", NextBernoulli(.5))
 	fmt.Printf("NextGeometric => %d\n", NextGeometric(.5))
 	fmt.Printf("NextBinomial => %d\n", NextBinomial(.5, 10))
-	fmt.Printf("NextPoisson => %d\n", NextPoisson(1.5))
 	fmt.Printf("NextXsquare => %f\n", NextXsquare(3))
 	fmt.Printf("NextNegativeBinomial => %d\n", NextNegativeBinomial(.5, 10))
 	fmt.Printf("NextStudentsT => %f\n", NextStudentsT(7))
@@ -111,7 +111,7 @@ func TestBinomP_CI(t *testing.T) {
 	alpha=0.1
 	low2=0.04
 	high2=0.21
-	low, high =  Binom_p_ConfI(n, p, alpha) 
+	low, high =  Binom_p_ConfI(n, p, alpha)
 	fmt.Println(low, " = ", low2, "\t", high, " = ",  high2)
 }
 */
